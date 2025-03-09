@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:latest
+    container_name: database2_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: dinosaurio95
+      MYSQL_DATABASE: exam2
+      MYSQL_USER: samy
+      MYSQL_PASSWORD: dinosaurio95
+    ports:
+      - "4800:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+  adminer:
+    image: adminer
+    container_name: database2_adminer
+    restart: always
+    ports:
+      - "9001:8080"
+
+volumes:
+  db_data:

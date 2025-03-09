@@ -1,0 +1,55 @@
+{
+  "C:\\Users\\ASUS\\Downloads\\Parcial-Microservicios\\serverless\\serverless.yml": {
+    "versionFramework": "4.7.0",
+    "servicePath": "C:\\Users\\ASUS\\Downloads\\Parcial-Microservicios\\serverless\\serverless.yml",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "service": "my-serverless-api",
+      "provider": {
+        "name": "aws",
+        "runtime": "nodejs18.x"
+      },
+      "functions": {
+        "fiveAttributes": {
+          "handler": "handler.fiveAttributes",
+          "events": [
+            {
+              "http": {
+                "path": "api/five",
+                "method": "get"
+              }
+            }
+          ]
+        },
+        "tenAttributes": {
+          "handler": "handler.tenAttributes",
+          "events": [
+            {
+              "http": {
+                "path": "api/ten",
+                "method": "get"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "provider": {
+      "name": "aws",
+      "runtime": "nodejs18.x"
+    },
+    "serviceRawFile": "﻿service: my-serverless-api\n\nprovider:\n  name: aws\n  runtime: nodejs18.x\n\nfunctions:\n  fiveAttributes:\n    handler: handler.fiveAttributes\n    events:\n      - http:\n          path: api/five\n          method: get\n\n  tenAttributes:\n    handler: handler.tenAttributes\n    events:\n      - http:\n          path: api/ten\n          method: get\r\n",
+    "command": [
+      "plugin",
+      "install"
+    ],
+    "options": {
+      "n": "serverless-offline"
+    },
+    "serviceProviderAwsCfStackId": null,
+    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": null,
+    "serviceProviderAwsCfStackOutputs": null
+  }
+}

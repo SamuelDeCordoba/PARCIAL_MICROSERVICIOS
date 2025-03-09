@@ -1,0 +1,23 @@
+﻿service: my-serverless-api
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  fiveAttributes:
+    handler: handler.fiveAttributes
+    events:
+      - http:
+          path: api/five
+          method: get
+
+  tenAttributes:
+    handler: handler.tenAttributes
+    events:
+      - http:
+          path: api/ten
+          method: get
+
+plugins:
+  - serverless-offline
